@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-slate-350: #f8fafc; /* Match var(--text-main) */
+  --color-slate-805: #1e293b; /* Match var(--card-bg) */
+  --color-slate-850: #1e293b; /* Match var(--card-bg) */
+  --color-slate-905: #0f172a; /* Match var(--bg) */
+  
+  /* Elegant Dark Custom Core Names */
+  --color-elegant-bg: #0f172a;
+  --color-elegant-card: #1e293b;
+  --color-elegant-accent: #06b6d4;
+  --color-elegant-text-main: #f8fafc;
+  --color-elegant-text-dim: #94a3b8;
+  --color-elegant-border: rgba(255, 255, 255, 0.05);
+}
+
+/* Custom Base Overrides for complete layout sync */
+body {
+  background-color: #0f172a; /* var(--bg) */
+  color: #f8fafc; /* var(--text-main) */
+  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer utilities {
+  /* Dynamic custom transitions and animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Text backing outline for readability over image banners */
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.92);
+  }
+
+  /* Symmetrical hover scaling effect */
+  .scale-102 {
+    transform: scale(1.02);
+  }
+
+  .scale-103 {
+    transform: scale(1.03);
+  }
+}
+
+/* Base modifications for the scrollbar aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
