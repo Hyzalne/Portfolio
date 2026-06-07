@@ -1,0 +1,6 @@
+{
+  "name": "Portfolio Nguyễn Đức Huy",
+  "description": "Portfolio Học Tập môn Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo (AI) của sinh viên Nguyễn Đức Huy - Đại học Công nghệ, ĐHQGHN.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
